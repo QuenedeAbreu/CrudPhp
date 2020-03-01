@@ -2,7 +2,7 @@
 <?php 
     include_once 'includes/header.php';
     ?>
-
+<main>
     <div class="row">
         <div class="col s12 m6 push-m3">
             <h3 class="light">Novo Cliente</h3>
@@ -49,9 +49,7 @@
 
     
     </div>
-    <script>
-         
-      </script>
+  </main>
     <!-- footer -->
     <?php
     include_once 'includes/footer.php';
