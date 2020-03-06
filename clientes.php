@@ -7,8 +7,15 @@
     include_once 'includes/header.php';
     //Mensagem
     include_once 'includes/mensagem.php';
+
+
     ?>
    <main>
+   <?php 
+   if(isset($_SESSION['nor'])){
+        echo '<h1>Acesso Negado</h1>';
+    }else{
+?>
     <div class="row">
         <div class="col s12 m6 push-m3">
             <h3 class="light">Clientes</h3>
@@ -80,8 +87,13 @@
 
     
     </div>
+    <?php
+}
+?>
 </main>
+
     <!-- footer -->
     <?php
+   
     include_once 'includes/footer.php';
 ?>

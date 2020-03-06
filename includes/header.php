@@ -12,11 +12,26 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>   
 
       <link type="text/css" rel="stylesheet" href="./style.css"/> 
+      
       <link id="favicon" rel="icon" href="https://pngimage.net/wp-content/uploads/2018/06/hydra-logo-png.png" type="image/png" sizes="16x16">
      
     </head>
 
     <body>
+
+    <?php 
+   //start de sessão
+   if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
+
+  if(!isset($_SESSION['adm']) && !isset($_SESSION['nor'])){
+    echo '<script>window.location.href = "login.php";</script>';
+}
+    include_once './php_action/db_connect.php';  
+    include_once 'pesquisa_usuario.php';
+  ?>
+
 
 <div class="navbar-fixed">
   
@@ -27,7 +42,7 @@
     <a href="#!" class="brand-logo"><img src="./img/hydra-logo.png"></a>
     <ul class="right hide-on-med-and-down">
     <li><i class="material-icons">person</i> </li>
-      <li><a href="perfil.php" class="nav-top-hover">Perfil</a></li>
+      <li><a href="<?php echo "visualizar_usuario.php?id={$ids}"?>" class="nav-top-hover"><?php echo $dados['nome']; ?></a></li>
       
       <li><i class="material-icons">exit_to_app</i> </li>
       <li><a href="sair.php" class="nav-top-hover">Sair</a></li>
@@ -71,8 +86,8 @@
         <img src="img/bg-menu.jpg">
       </div>
       <a href="#user"><img class="circle" src="img/hydra-logo.png"></a>
-      <a href="#name"><span class="white-text name">Quenede Abreu</span></a>
-      <a href="#email"><span class="white-text email">quenede.in@gmail.com</span></a>
+      <a href="#name"><span class="white-text name"><?php echo $dados['nome']; ?></span></a>
+      <a href="#email"><span class="white-text email"><?php echo $dados['email']; ?></span></a>
     </div></li>
 
     <li><a href="#!" class=""><i class="material-icons">navigation</i>Navegação</a></li>
@@ -90,9 +105,9 @@
             <a class="collapsible-header">Perfil<i class="material-icons">arrow_drop_down</i></a>
             <div class="collapsible-body">
               <ul>
-                <li><a href="#!"><i class="material-icons">person</i>Visualizar Perfil</a></li>
+                <li><a href="<?php echo "visualizar_usuario.php?id={$ids}"?>"><i class="material-icons">person</i>Visualizar Perfil</a></li>
                 <li><a href="#!"><i class="material-icons">edit</i>Editar Perfil</a></li>
-                <li><a href="#!"><i class="material-icons">exit_to_app</i>Sair</a></li>
+                <li><a href="sair.php"><i class="material-icons">exit_to_app</i>Sair</a></li>
                 
               </ul>
             </div>
@@ -105,3 +120,5 @@
 
 
   </ul>
+
+

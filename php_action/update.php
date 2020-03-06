@@ -18,11 +18,11 @@
 
          if(mysqli_query($connect, $sql)){
             $_SESSION['mensagem'] = "Atualizado com sucesso!";
-            header('Location: ../index.php?');
+            header('Location: ../clientes.php?');
 
         }else{
             $_SESSION['mensagem'] = "Erro ao Atualizar!";
-            header('Location: ../index.php?');
+            header('Location: ../clientes.php?');
         }
     }
 

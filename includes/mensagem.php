@@ -1,7 +1,7 @@
 
 <?php
 // Sessão
-session_start();
+
 if(isset($_SESSION['mensagem'])): ?>	
 
 <script>
@@ -13,5 +13,7 @@ if(isset($_SESSION['mensagem'])): ?>
 
 <?php
 endif;
-session_unset();
+
+unset($_SESSION['mensagem']);
+
 ?>

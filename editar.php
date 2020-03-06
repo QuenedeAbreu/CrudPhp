@@ -58,8 +58,8 @@
                     <label for="data">Data</label>
                 </div>
                 
-                <button type="submit" name="btn-atualizar" class="btn">Atualizar</button>
-                <a class="btn green" href="index.php">Clientes</a>
+                <button type="submit" name="btn-atualizar" class="btn black">Atualizar</button>
+                <a class="btn black" href="clientes.php">Clientes</a>
            </form>
         </div>
 

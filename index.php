@@ -7,6 +7,8 @@
     include_once 'includes/header.php';
     //Mensagem
     include_once 'includes/mensagem.php';
+    
+ 
     ?>
    
 
@@ -15,8 +17,10 @@
              <div class="row ">
             <div class="col s12 m6 push-m3">
             
-            <h1>Bem Vindo a Hydra</h1>
-           
+            
+            <h1>Bem Vindo a Hydra
+           <br><br/> <?php echo $dados['nome']; ?> </h1>
+
         
     </div>
 </div>
