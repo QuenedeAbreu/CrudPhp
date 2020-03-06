@@ -2,19 +2,12 @@
     //conexao
     include_once 'php_action/db_connect.php';
 
-
-
      //start de sessão
      if (session_status() == PHP_SESSION_NONE) {
         session_start();
       }
     
-    
- 
-
-  
-
-   if(isset($_POST['login']) && isset($_POST['senha'])){
+       if(isset($_POST['login']) && isset($_POST['senha'])){
     $login = mysqli_escape_string($connect,$_POST['login']);
     $senha = mysqli_escape_string($connect,$_POST['senha']);
     
@@ -40,12 +33,6 @@
     }else{
         echo 'O email ou senha digitados estão errados!';
     }
-
-
-    
-           
-
-
    }
 
 
