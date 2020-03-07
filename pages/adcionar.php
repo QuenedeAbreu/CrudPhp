@@ -1,12 +1,12 @@
-<!-- footer -->
+
 <?php 
-    include_once 'includes/header.php';
+    include_once '../includes/header.php';
     ?>
 <main>
     <div class="row">
         <div class="col s12 m6 push-m3">
             <h3 class="light">Novo Cliente</h3>
-           <form action="php_action/create.php" method="POST">
+           <form action="<?php echo 'http://localhost:8080/CrudPhp/php_action/create.php' ;?>" method="POST">
                 <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
                     <input type="text" name="nome" id="nome">
@@ -43,7 +43,7 @@
                 </div>
                 
                 <button type="submit" name="btn-cadastrar" class="btn black">Cadastrar</button>
-                <a class="btn black" href="clientes.php">Clientes</a>
+               <a class="btn black" href="http://localhost:8080/CrudPhp/pages/clientes.php">Clientes</a>
            </form>
         </div>
 
@@ -52,5 +52,5 @@
   </main>
     <!-- footer -->
     <?php
-    include_once 'includes/footer.php';
+    include_once '../includes/footer.php';
 ?>

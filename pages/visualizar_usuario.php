@@ -2,11 +2,11 @@
 <?php 
 
     //Conexao
-    include_once 'php_action/db_connect.php';
+    include_once '../php_action/db_connect.php';
     //Header
-    include_once 'includes/header.php';
+    include_once '../includes/header.php';
     //Mensagem
-    include_once 'includes/mensagem.php';
+    include_once '../includes/mensagem.php';
     ?>
 
         <?php
@@ -66,5 +66,5 @@
  </main>
     <!-- footer -->
     <?php
-    include_once 'includes/footer.php';
+    include_once '../includes/footer.php';
 ?>

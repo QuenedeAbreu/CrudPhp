@@ -17,11 +17,11 @@
 
         if(mysqli_query($connect, $sql)){
             $_SESSION['mensagem'] = "Cadastrado com sucesso!";
-            header('Location: ../clientes.php?');
+            header('Location: ../pages/clientes.php?');
 
         }else{
             $_SESSION['mensagem'] = "Erro ao cadastrar!";
-            header('Location: ../clientes.php?');
+            header('Location: ../pages/clientes.php?');
         }
     }
 

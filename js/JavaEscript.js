@@ -9,3 +9,4 @@ $(document).ready(function() {
     var favicon = document.getElementById('favicon');
     
   };
+

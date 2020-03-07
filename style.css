@@ -12,6 +12,11 @@ body {
     background-position: bottom center;
     
   }
+.inco-top-menu{
+    float: right;
+    position: relative;
+    right: -40%;
+}
 
   .input-field label {
     color: #000 !important;
@@ -125,6 +130,10 @@ nav img{
     border: 2px solid #fff !important;
 }
 
+.modal-content{
+    width: 100%;
+}
+
 .modal-footer{
     border-top: solid 1px rgb(59, 59, 59) !important;
     background-color: black !important;
@@ -179,3 +188,4 @@ nav .nav-wrapper {
     position: absolute  !important;
     left: 40%;
 }
+

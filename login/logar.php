@@ -1,6 +1,6 @@
 <?php 
     //conexao
-    include_once 'php_action/db_connect.php';
+    include_once '../php_action/db_connect.php';
 
 
 
@@ -35,7 +35,7 @@
                         $_SESSION['nor'] = $id;
                     }
 
-                    echo '<script type="text/javascript">window.location.href = "index.php";</script>';
+                    echo '<script type="text/javascript">window.location.href = "http://localhost:8080/CrudPhp/index.php";</script>';
             }
     }else{
         echo 'O email ou senha digitados estão errados!';
