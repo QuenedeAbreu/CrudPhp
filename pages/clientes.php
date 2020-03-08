@@ -11,11 +11,7 @@
 
     ?>
    <main>
-   <?php
-   if(isset($_SESSION['nor'])){
-        echo '<h1>Acesso Negado</h1>';
-    }else{
-?>
+
     <div class="row">
         <div class="col s12 m6 push-m3">
             <h3 class="light">Clientes</h3>
@@ -45,12 +41,23 @@
                         <td><?php echo $dados['idade']; ?></td>
                         <td><?php echo $dados['sexo']; ?></td>
                         <td><?php echo $dados['cidade']; ?></td>
-                        <td><?php echo $dados['id']; ?></td>
-                        <td><?php echo date('d/m/Y', strtotime($dados['data']));?></td>
-                        <td><a href="<?php echo "http://localhost:8080/CrudPhp/pages/visualizar.php?id={$dados['id']}"?>" class="btn-floating blue" alt="Profile" title="Profile"><i class="material-icons">zoom_in</i></a></td>
-                        <td><a href="<?php echo "http://localhost:8080/CrudPhp/pages/editar.php?id={$dados['id']}"?>" class="btn-floating orange" alt="Edit" title="Edit"><i class="material-icons">edit</i></a></td>
-                        <td><a href="#modal<?php echo $dados['id'];?>" class="btn-floating red modal-trigger"  alt="Delete" title="Delete"><i class="material-icons">delete</i></a><td>
+                        </td><td><?php echo date('d/m/Y', strtotime($dados['data']));?></td>
+                         <td><a href="<?php echo "http://localhost:8080/CrudPhp/pages/visualizar.php?id={$dados['id']}"?>" class="btn-floating blue" alt="Profile" title="Profile"><i class="material-icons">zoom_in</i></a></td>
+                        <?php
+                        if(isset($_SESSION['nor'])){
+                        ?>
+                            <style type="text/css">
+                            .display-none{
+                                display: none;
+                            </style>
 
+                            <?php
+                        }else{
+                            ?>
+                        <td><a href="<?php echo "http://localhost:8080/CrudPhp/pages/editar.php?id={$dados['id']}"?>" class="btn-floating orange display-none" alt="Edit" title="Edit"><i class="material-icons">edit</i></a></td>
+                        <td><a href="#modal<?php echo $dados['id'];?>" class="btn-floating red modal-trigger display-none"  alt="Delete" title="Delete"><i class="material-icons">delete</i></a><td>
+                            <?php
+                         }?>
                            <!-- Modal Structure -->
                              <div id="modal<?php echo $dados['id'];?>" class="modal bottom-sheet">
 
@@ -96,7 +103,7 @@
 
     </div>
     <?php
-}
+
 ?>
 </main>
 

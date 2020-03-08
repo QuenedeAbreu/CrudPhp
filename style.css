@@ -58,22 +58,23 @@ body {
   }
 .row h1{
     text-align: center;
-    margin-top: 30%;
+    margin-top: 20%;
     font-family: 'Amethysta', Arial, Helvetica, sans-serif;
     color: #000;
     animation-duration: 3s;
     animation-name: h1;
     font-size: 4em !important;
+    position: absolute;
 
 }
 @keyframes h1{
     from {
-        margin-top: 50%;
+        margin-top: 40%;
         opacity: 0;
       }
     
       to {
-        margin-top: 30%;
+        margin-top: 20%;
         opacity: 1;
         
       }
@@ -89,6 +90,7 @@ nav img{
     height: 80px;
     margin-top: 10%;
 }
+
 .img-menu{
     width: 80px;
     height: 80px;
@@ -189,3 +191,42 @@ nav .nav-wrapper {
     left: 40%;
 }
 
+
+
+.acesso_negado{
+    width:300px ;
+    height:300px ;
+    padding: 0 10px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px #000;
+    background:rgb(255, 255, 255,.8);
+    border-radius: 10px;
+}
+
+.acesso_negado img{
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    margin-top:30px;
+    left:50%;
+    margin-left:-50px;
+}
+.acesso_negado h1{
+    font-size: 2em;
+    position: absolute;
+    top:50%;
+    margin-top:10px;
+    left: 13%;
+    font-weight: bold;
+
+}
+
+.acesso_negado a{
+    position: absolute;
+    top:75%;
+    margin-top:10px;
+    left: 36%;
+}

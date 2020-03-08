@@ -15,7 +15,7 @@ include_once '../includes/mensagem.php';
 <main>
 
     <div class="row ">
-        <div class="col s12 m6 push-m3">
+        <div class="col s12 m6 push-m3 ">
 
 
             <h1>Bem Vindo a Hydra
