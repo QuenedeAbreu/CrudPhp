@@ -1,3 +1,4 @@
+<main>
 <div class="acesso_negado">
     
     <img src="http://localhost:8080/CrudPhp/img/alerta.png">
@@ -5,3 +6,4 @@
     <a href="index.php" class="btn black ">Voltar</a>
 
 </div>
+</main>

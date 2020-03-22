@@ -7,10 +7,11 @@ if (isset($_SESSION['nor'])) {
         include_once '../pages/acesso_negado.php';
 
     ?>
-    <main>
+
         <?php
         }else {
         ?>
+<main>
         <div class="row">
             <div class="col s12 m6 push-m3">
                 <h3 class="light">Novo Cliente</h3>
@@ -29,7 +30,7 @@ if (isset($_SESSION['nor'])) {
 
                     <div class="input-field col s12">
                         <i class="material-icons prefix">thumbs_up_down</i>
-                        <select id="sexo" name="sexo">
+                        <select id="sexo" name="sexo" >
                             <option value="" disabled selected>Selecione o Sexo</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Feminino">Feminino</option>

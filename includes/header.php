@@ -66,6 +66,8 @@
     </div>
 
   </div>
+
+
 </nav>
 
 </div>
@@ -108,6 +110,8 @@
 
       <li><a href="http://localhost:8080/CrudPhp/index.php"><i class="material-icons">home</i>Home</a></li>
       <li><a href="http://localhost:8080/CrudPhp/pages/clientes.php"><i class="material-icons">people</i>Clientes</a></li>
+      <li><a href="http://localhost:8080/CrudPhp/pages/admins.php"><i class="material-icons">people</i>Admins</a></li>
+      <li><a href="http://localhost:8080/CrudPhp/pages/adcionar_adm.php"><i class="material-icons">person_add</i>Adcionar Admins</a></li>
       <li><a href="http://localhost:8080/CrudPhp/pages/adcionar.php"><i class="material-icons">person_add</i>Adcionar Clientes</a></li>
     <li><div class="divider"></div></li>
     

@@ -25,10 +25,10 @@
    
     if($cont == 1){
             while ($percorer = mysqli_fetch_array($pesquisa)) {
-                $adm = $percorer['tipo'];
+                $adm = $percorer['tipo_usuario'];
                 $id = $percorer['id'];
                 
-                    if($adm == 1){
+                    if($adm == '1'){
                         $_SESSION['adm'] = $id;
                         
                     }else{

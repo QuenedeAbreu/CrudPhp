@@ -45,17 +45,19 @@
         <form action="logar.php" method="POST">
             <h1>Login</h1>
              <div class="col s12 ">
-                <div class="input-field col ">
+                <div class="input-field col border">
                     <i class="material-icons prefix">person</i>
-                    <input type="text" name="login" id="login">
+                    <input type="email" name="login" id="login" class="validate"  required >
                     <label for="login">Email</label>
+
                 </div>
+
             </div>
 
             <div class="col s12 ">
-                <div class="input-field col ">
+                <div class="input-field col border">
                     <i class="material-icons prefix">vpn_key</i>
-                    <input type="password" name="senha" id="senha">
+                    <input type="password" name="senha" id="senha" required >
                     <label for="senha">Senha</label>
                 </div>
             </div>

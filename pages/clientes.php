@@ -1,14 +1,10 @@
-
-<?php 
-
+<?php
     //Conexao
     include_once '../php_action/db_connect.php';
     //Header
     include_once '../includes/header.php';
     //Mensagem
     include_once '../includes/mensagem.php';
-
-
     ?>
    <main>
 
@@ -58,6 +54,7 @@
                         <td><a href="#modal<?php echo $dados['id'];?>" class="btn-floating red modal-trigger display-none"  alt="Delete" title="Delete"><i class="material-icons">delete</i></a><td>
                             <?php
                          }?>
+
                            <!-- Modal Structure -->
                              <div id="modal<?php echo $dados['id'];?>" class="modal bottom-sheet">
 
@@ -78,11 +75,6 @@
                                 </div>
                             </div>
 
-
-
-
-
-
                     </tr>
                         <?php
                             }
@@ -96,7 +88,7 @@
                 </tbody>
             </table>
             <br/>
-            <a href="adcionar.php" class="btn black">Adcionar Cliente</a>
+            <a href="adcionar.php" class="btn black  display-none">Adicionar Cliente</a>
 
         </div>
 

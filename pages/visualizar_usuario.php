@@ -17,8 +17,17 @@
              $resultado = mysqli_query($connect, $sql);
              $dados = mysqli_fetch_array($resultado);
                  }
-                       
-              ?>
+
+
+        if (isset($_SESSION['nor'])) {
+            include_once '../pages/acesso_negado.php';
+
+            ?>
+
+            <?php
+        }else {
+        ?>
+
 
 <main>
     <div class="row">
@@ -44,7 +53,7 @@
                         <td><?php echo $dados['email']; ?></td>
                         <td><?php echo $dados['senha']; ?></td>
                         <td><?php 
-                            if($dados['tipo'] == 1){
+                            if($dados['tipo_usuario'] == '1'){
                                 echo 'Administrador';
                             }else{
                                 echo 'Professor';
@@ -58,11 +67,12 @@
                 </tbody>            
             </table>
             <br/>
-           
+            <a class="btn black" href="http://localhost:8080/CrudPhp/pages/clientes.php">Clientes</a>
         </div>
 
     
     </div>
+    <?php }?>
  </main>
     <!-- footer -->
     <?php
