@@ -25,7 +25,7 @@
 
                 <tbody>
                     <?php
-                        $sql = "SELECT * FROM  cadastro";
+                        $sql = "SELECT * FROM  cadastro ORDER BY 2";
                         $resultado = mysqli_query($connect, $sql);
                         if(mysqli_num_rows($resultado) > 0){
                         //LOOP

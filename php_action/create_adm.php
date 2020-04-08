@@ -11,15 +11,15 @@ if(isset($_POST['btn-cadastrar'])){
     $sobrenome = mysqli_escape_string($connect, $_POST['sobrenome']);
     $email = mysqli_escape_string($connect, $_POST['email']);
     $senha = mysqli_escape_string($connect, $_POST['senha']);
-    $foto_perfil = mysqli_escape_string($connect, $_POST['foto_perfil']);
+    
+    //variavel de upload de foto de perfil
+    $foto_perfil = mysqli_escape_string($connect, $_FILES['foto_perfil']['name']);
 
     if(isset($_POST['tipo_usuario'])) {
         $tipo_usuario = mysqli_escape_string($connect, $_POST['tipo_usuario']);
     }else{
         $tipo_usuario = '0';
     }
-
-
 
     $sql="INSERT INTO usuario (nome,sobrenome,email,senha,foto,tipo_usuario,status) VALUE('$nome','$sobrenome','$email','$senha','$foto_perfil','$tipo_usuario','1')";
 

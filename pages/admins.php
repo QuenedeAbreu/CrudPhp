@@ -33,7 +33,7 @@ if (isset($_SESSION['nor'])) {
 
                     <tbody>
                     <?php
-                    $sql = "SELECT * FROM  usuario";
+                    $sql = "SELECT * FROM  usuario ORDER BY 2";
                     $resultado = mysqli_query($connect, $sql);
                     if(mysqli_num_rows($resultado) > 0){
                         //LOOP
@@ -52,7 +52,16 @@ if (isset($_SESSION['nor'])) {
                                     }
 
                                     ?></td>
-                                <td><?php echo "";?></td>
+                                
+                                <?php 
+                               
+                                    if($dados['foto'] == null){ ?>
+                                        <td> <img src="../img/hydra-logo.png" class="foto"/></td>
+                                    <?php }else{ ?>
+                                       <td> <img src="../img/<?php echo $dados['foto'];?>" class="foto"/></td>
+                                    <?php }
+                                ?>
+                                
 
                                 <td><a href="<?php echo "http://localhost:8080/CrudPhp/pages/visualizar.php?id={$dados['id']}"?>" class="btn-floating blue" alt="Profile" title="Profile"><i class="material-icons">zoom_in</i></a></td>
                                 <?php
@@ -83,7 +92,7 @@ if (isset($_SESSION['nor'])) {
 
                                         <div class="modal-footer">
 
-                                            <form action="../php_action/deletar.php" method="POST">
+                                            <form action="../php_action/deletar_adm.php" method="POST">
                                                 <input type="hidden" name="id" value="<?php echo $dados['id'];?>">
                                                 <button type="submit" name="btn-deletar" class="btn red">Sim quero deletar!</button>
                                                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>

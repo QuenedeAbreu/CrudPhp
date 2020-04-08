@@ -15,7 +15,7 @@ if (isset($_SESSION['nor'])) {
     <div class="row">
         <div class="col s12 m6 push-m3">
             <h3 class="light">Novo Administrador</h3>
-            <form action="<?php echo 'http://localhost:8080/CrudPhp/php_action/create_adm.php'; ?>" method="POST">
+            <form action="<?php echo 'http://localhost:8080/CrudPhp/php_action/create_adm.php'; ?>" method="POST" enctype="multipart/form-data">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
                     <input type="text" name="nome" id="nome">
