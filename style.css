@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Amethysta&display=swap');
 
+@media only screen and (max-width: 700px) {
+    body{
+        background-size: 100%;
+        background-position: 50% 40%;
+    }
+    .text-ini{
+        margin: 0 auto;
+        width: 100%;
+    }
+  }
+
+  @keyframes h1{
+    from {
+        margin-top: 40%;
+        opacity: 0;
+      }
+    
+      to {
+        margin-top: 20%;
+        opacity: 1;
+        
+      }
+    }
 
 body {
     display: flex;
@@ -8,9 +31,12 @@ body {
     background-image: url(img/hydra-logo2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: contain;
-    background-position: bottom center;
-    
+    background-size: 28%;
+    background-position: 50% 35%;
+  }
+
+  main {
+    flex: 1 0 auto;
   }
 .inco-top-menu{
     float: right;
@@ -61,34 +87,25 @@ body {
     color: #000 !important;
   }
 
-.row h1{
+
+  .text-ini{
+    margin: 0 auto;
+    width: 45%;
+    margin-left: 10%;
+    
+}
+
+.text-ini h1{
     text-align: center;
-    margin-top: 20%;
+    margin-top:20% ;
     font-family: 'Amethysta', Arial, Helvetica, sans-serif;
     color: #000;
     animation-duration: 3s;
     animation-name: h1;
     font-size: 4em !important;
     position: absolute;
-
-}
-@keyframes h1{
-    from {
-        margin-top: 40%;
-        opacity: 0;
-      }
     
-      to {
-        margin-top: 20%;
-        opacity: 1;
-        
-      }
-    }
-
-
-main {
-    flex: 1 0 auto;
-  }
+}
 
 nav img{
     width: 80px;

@@ -56,9 +56,9 @@ if (isset($_SESSION['nor'])) {
                                 <?php 
                                
                                     if($dados['foto'] == null){ ?>
-                                        <td> <img src="../img/hydra-logo.png" class="foto"/></td>
+                                        <td> <img src="../perfil_adms/hydra-logo.png" class="foto"/></td>
                                     <?php }else{ ?>
-                                       <td> <img src="../img/<?php echo $dados['foto'];?>" class="foto"/></td>
+                                       <td> <img src="../perfil_adms/<?php echo $dados['foto'];?>" class="foto"/></td>
                                     <?php }
                                 ?>
                                 

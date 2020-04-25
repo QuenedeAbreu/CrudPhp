@@ -21,8 +21,13 @@ if(isset($_POST['btn-cadastrar'])){
         $tipo_usuario = '0';
     }
 
+    
     $sql="INSERT INTO usuario (nome,sobrenome,email,senha,foto,tipo_usuario,status) VALUE('$nome','$sobrenome','$email','$senha','$foto_perfil','$tipo_usuario','1')";
-
+    
+    //Movendo imagem para pasta
+    $pasta = '../perfil_adms';
+    move_uploaded_file($_FILES['foto_perfil']['tmp_name'],$pasta.'/'.$foto_perfil);
+    
     if(mysqli_query($connect, $sql)){
         $_SESSION['mensagem'] = "Cadastrado com sucesso!";
         header('Location: ../pages/admins.php?');
