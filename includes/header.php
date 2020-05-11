@@ -100,7 +100,16 @@
       <div class="background">
         <img src="http://localhost:8080/CrudPhp/img/bg-menu.jpg">
       </div>
-      <a href="#user"><img class="circle" src="http://localhost:8080/CrudPhp/img/hydra-logo.png"></a>
+      
+      <a href="#user"> <?php 
+        if($dados['foto'] == null){ ?>
+            <img src="../perfil_adms/hydra-logo.png" class="foto-perfil"/>
+        <?php }else{ ?>
+            <img src="../perfil_adms/<?php echo $dados['foto'];?>" class="foto-perfil"/>
+        <?php 
+        }
+      ?></a>
+
       <a href="#name"><span class="white-text name"><?php echo $dados['nome']; ?></span></a>
       <a href="#email"><span class="white-text email"><?php echo $dados['email']; ?></span></a>
     </div></li>
